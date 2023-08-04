@@ -1,0 +1,7 @@
+{
+    "editor.codeLensFontFamily": "",
+    "editor.fontFamily": "JetBrains Mono, Menlo, Monaco, 'Courier New', monospace",
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    }
+}

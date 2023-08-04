@@ -1,0 +1,31 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+
+    "extends": [
+        "eslint:recommended",
+        "plugin:nuxt/recommended",
+        "plugin:vue/vue3-recommended",
+        "plugin:import/recommended",
+        "plugin:import/typescript",
+        "@nuxt/eslint-config"
+    ],
+
+    "parser": "vue-eslint-parser",
+
+    "plugins": [ "vue" ],
+
+    "settings": {
+        "import/resolver": {
+            "typescript": true,
+            "node": true
+        }
+    },
+
+    "rules": {
+        "vue/no-v-html": "off"
+    }
+}
