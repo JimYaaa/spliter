@@ -15,5 +15,9 @@ export default defineConfig({
         }),
     ],
 
+    rules: [
+        ['shadow-card', { 'box-shadow': '' }]
+    ],
+
     transformers: [ transformerDirectives() ]
 })

@@ -3,5 +3,6 @@
     "editor.fontFamily": "JetBrains Mono, Menlo, Monaco, 'Courier New', monospace",
     "editor.codeActionsOnSave": {
         "source.fixAll": true
-    }
+    },
+    "editor.tabSize": 2
 }

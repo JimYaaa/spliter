@@ -21,5 +21,12 @@
     "nuxt": "^3.6.5",
     "sass": "^1.62.1",
     "vue-eslint-parser": "^9.3.0"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.4.11",
+    "@unocss/reset": "^0.54.1",
+    "firebase": "^10.3.0",
+    "firebaseui": "^6.1.0",
+    "pinia": "^2.1.6"
   }
 }
