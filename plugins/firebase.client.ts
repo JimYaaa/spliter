@@ -29,6 +29,6 @@ export default defineNuxtPlugin(() => {
             db,
             auth,
             analytics,
-        }
+        },
     }
 })

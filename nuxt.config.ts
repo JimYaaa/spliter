@@ -3,7 +3,7 @@
 export default defineNuxtConfig({
     ssr: false,
 
-    modules: [ '@unocss/nuxt', '@pinia/nuxt' ],
+    modules: [ '@unocss/nuxt', '@pinia/nuxt', 'nuxt-svgo', '@nuxtjs/google-fonts' ],
 
     css: [
         '@unocss/reset/tailwind-compat.css',
@@ -19,5 +19,15 @@ export default defineNuxtConfig({
             APP_ID: process.env.APP_ID,
             MEASURENENT_ID: process.env.MEASURENENT_ID,
         },
-    }
+    },
+
+    svgo: {
+        defaultImport: 'component',
+    },
+
+    googleFonts: {
+        families: {
+            Lato: [100, 300],
+        },
+    },
 })

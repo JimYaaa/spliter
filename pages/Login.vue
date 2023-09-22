@@ -1,20 +1,20 @@
 <script setup lang="ts">
-import * as firebaseui from 'firebaseui'
-import firebase from 'firebase/compat/app'
+import Google from '~/assets/svg/google.svg'
 import 'firebaseui/dist/firebaseui.css'
 import {
   signInWithPopup,
   GoogleAuthProvider,
   getAdditionalUserInfo,
-  onAuthStateChanged,
 } from 'firebase/auth'
 import { useUserStore } from '~/stores/user'
 
-const { $db, $auth } = useNuxtApp()
+definePageMeta({
+  layout: 'login',
+})
+
+const { $auth } = useNuxtApp()
 const provider = new GoogleAuthProvider()
 const userStore = useUserStore()
-
-
 
 // Login Function
 function login() {
@@ -36,19 +36,18 @@ function login() {
       }
     })
 }
-
-// onMounted(() => {
-//   const ui = new firebaseui.auth.AuthUI($auth)
-    
-//   ui.start('#firebaseui-auth-container', {
-//     signInSuccessUrl: '/',
-//     signInOptions: [
-//       firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-//     ]
-//   })
-// })
 </script>
 
 <template>
-  <div id="firebaseui-auth-container" />
+  <div class="w-full">
+    <button
+      class="w-full flex items-center justify-center rounded-7.5 px-3.75 py-2.75 font-lato font-300"
+      @click="login"
+    >
+      <Google class="w-7.5" />
+      <p class="mx-7.5 font-bold">
+        Login With Google
+      </p>
+    </button>
+  </div>
 </template>

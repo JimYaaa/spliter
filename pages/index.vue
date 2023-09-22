@@ -1,12 +1,15 @@
 <script setup lang="ts">
-const { $db, $auth } = useNuxtApp()
+const { $auth } = useNuxtApp()
 
-const user = $auth.currentUser
-console.log(user)
+function logout() {
+  $auth.signOut()
+}
 </script>
 
 <template>
   <div>
-    TEST TEST
+    <button @click="logout">
+      Logout
+    </button>
   </div>
 </template>

@@ -1,19 +1,9 @@
 <script setup lang="ts">
-function debounce(fn: Function, delay = 500) {
-  let timer: ReturnType<typeof setTimeout> = setTimeout(() => '', delay)
+const { $auth } = useNuxtApp()
 
-  return (...args: any) => {
-    clearTimeout(timer)
-
-    timer = setTimeout(() => {
-      fn(...args)
-    }, delay)
-  }
+function logout() {
+  $auth.signOut()
 }
-
-const changeTextDebounce = debounce((e: InputEvent) => {
-  console.log('Jim', (e.target as HTMLInputElement).value)
-}, 1000)
 </script>
 
 <template>
